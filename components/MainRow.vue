@@ -1,5 +1,6 @@
 <script setup>
 import { ref, onMounted, defineProps } from 'vue';
+const router = useRouter()
 
 const { delay = 0, speed = 1 } = defineProps(['delay', 'speed']); // Added speed prop
 const boxRefs = Array(4).fill(null).map(() => ref(null));
@@ -38,6 +39,18 @@ onMounted(() => {
     });
   }, delay);
 });
+
+// router.beforeEach((to, from, next) => {
+//  console.log('turtles delay');
+//  animationIsComplete = true;
+//  if (animationIsComplete) {
+//    next();
+//  } else {
+    // delay the navigation or trigger the animation to complete
+//  }
+// });
+
+
 </script>
 
 <template>

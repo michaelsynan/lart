@@ -8,10 +8,10 @@ const online = useOnline(); // Assuming useOnline is imported or defined
   <div class="relative flex flex-col w-full h-screen">
     <div class="absolute inset-0 flex items-center justify-center">
       <div class="text-center text-white mb-20 flex flex-row" style="font-size: clamp(16px, 14vw, 240px);">
-  <div id="L_art" class="z-100 pr-20 pointer-events-none text-outline mainheading">L'art</div>
-  <div id="de" class="pr-20 text-outline mainheading">de</div>
-  <div id="la" class="z-100 pr-20 pointer-events-none text-outline mainheading">la</div>
-  <div id="rue" class="text-outline mainheading">rue</div>
+  <div id="L_art" class="z-100 pr-20 pointer-events-none text-outline mainheading -rotate-15 text-stone-300">L'art</div>
+  <div id="de" class="pr-20 text-outline mainheading -rotate-15 text-stone-300">de</div>
+  <div id="la" class="z-100 pr-20 pointer-events-none text-outline mainheading -rotate-15 text-stone-300">la</div>
+  <div id="rue" class="text-outline mainheading -rotate-15 text-stone-300">rue</div>
 </div>
 
 
