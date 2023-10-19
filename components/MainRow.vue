@@ -48,8 +48,8 @@ onMounted(() => {
       :ref="el => { boxRefs[index].value = el }"
       class="fixed w-25 h-25 opacity-100 scale-on-hover"
       :style="{ 
-        width: '200px', 
-        height: '200px', 
+        width: '220px', 
+        height: '220px', 
         backgroundSize: 'cover',
         'margin-top': index % 2 === 0 ? '100px' : '0px' 
       }"
