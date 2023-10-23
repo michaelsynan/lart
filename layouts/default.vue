@@ -9,7 +9,11 @@
 </template>
 
 <style>
-main {
-  background-color: black;
-}
+  .bg-gradient-to-r-custom {
+    background-image: linear-gradient(to right, #110600, transparent);
+  }
+
+  .bg-gradient-to-l-custom {
+    background-image: linear-gradient(to left, #110600, transparent);
+  }
 </style>
