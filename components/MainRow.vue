@@ -30,12 +30,20 @@ function easeStep(target) {
   }, 16);
 }
 
+function calculateSpacingMultiplier(windowWidth) {
+  if (windowWidth < 800) {
+    return 1.0;
+  }
+  return 0.3;
+}
+
 onMounted(() => {
-  function animateBox(box, startPosition) {
-    let position = startPosition;
+  function animateBox(box) {
+    let position = parseFloat(box.style.right);
     function moveBox() {
-      if (position <= -200) {
-        position = window.innerWidth + 200;
+      if (position <= -220) {
+        position = Math.max(window.innerWidth, lastRight + 200);
+        lastRight = position + 220;
       }
       position -= state.step;
       box.style.right = `${position}px`;
@@ -44,35 +52,37 @@ onMounted(() => {
     requestAnimationFrame(moveBox);
   }
 
-  // Shuffle the images array
   shuffleArray(images);
 
-  // Create random indexes
   const randomIndexes = [0, 1, 2, 3];
   shuffleArray(randomIndexes);
 
+  let lastRight = 0;
+
   randomIndexes.forEach((index, i) => {
-    const initialPosition = window.innerWidth * 0.3 * index;
+    const initialPosition = lastRight + 200;
+    lastRight = initialPosition + 220;
+
     const boxRef = boxRefs[index];
     boxRef.value.style.right = `${initialPosition}px`;
-
-    // Use shuffled images array to set background
     boxRef.value.style.backgroundImage = `url(${images[i]})`;
-
     boxRef.value.style.opacity = '0';
+
     setTimeout(() => {
       boxRef.value.style.transition = 'opacity .1s ease-in';
       boxRef.value.style.opacity = '1';
-      animateBox(boxRef.value, initialPosition);
+      animateBox(boxRef.value);
     }, i * 200);
   });
 });
+
+
 
 </script>
 
 <template>
   <div 
-    class="flex justify-center items-center h-full"
+    class="flex justify-center items-center h-full overflow-x-hidden"
     @mouseover="easeStep(0)"
     @mouseout="easeStep(speed)"
   >
@@ -109,6 +119,7 @@ onMounted(() => {
     @apply w-12 h-12;
   }
 }
+
 
 
 </style>

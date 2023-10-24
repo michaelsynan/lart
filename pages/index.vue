@@ -35,9 +35,9 @@ onMounted(() => {
 
 
     </div>
-    <MainRow class="w-full" :speed="2" />
-    <MainRow class="w-full" :delay="1000" :speed="3" />
-    <MainRow class="w-full" :delay="2000" :speed="2" />
+    <MainRow :speed="2" />
+    <MainRow  :delay="1000" :speed="3" />
+    <MainRow :delay="2000" :speed="2" />
   </div>
 </template>
 
