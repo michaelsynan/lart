@@ -31,12 +31,9 @@ onMounted(() => {
           la</div>
         <div v-if="showWords[3]" class="text-outline mainheading -rotate-15 text-stone-200 ">rue</div>
       </div>
-
-
-
     </div>
     <MainRow :speed="2" />
-    <MainRow  :delay="1000" :speed="3" />
+    <MainRow :delay="1000" :speed="3" />
     <MainRow :delay="2000" :speed="2" />
   </div>
 </template>
@@ -44,5 +41,4 @@ onMounted(() => {
 
 <style block>
 .text-outline {}
-
 </style>
