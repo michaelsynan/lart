@@ -4,7 +4,7 @@ import { ref, reactive, onMounted } from 'vue';
 const { speed = 1 } = defineProps(['speed']);
 const boxRefs = Array(4).fill(null).map(() => ref(null));
 const state = reactive({ step: speed, isHovered: false });
-const images = Array.from({ length: 12 }, (_, i) => `${i + 1}.jpg`);
+const images = Array.from({ length: 14 }, (_, i) => `${i + 1}.jpg`);
 
 function getRandomImage() {
   return images[Math.floor(Math.random() * images.length)];
@@ -44,6 +44,10 @@ onMounted(() => {
     requestAnimationFrame(moveBox);
   }
 
+  // Shuffle the images array
+  shuffleArray(images);
+
+  // Create random indexes
   const randomIndexes = [0, 1, 2, 3];
   shuffleArray(randomIndexes);
 
@@ -51,7 +55,10 @@ onMounted(() => {
     const initialPosition = window.innerWidth * 0.3 * index;
     const boxRef = boxRefs[index];
     boxRef.value.style.right = `${initialPosition}px`;
-    boxRef.value.style.backgroundImage = `url(${getRandomImage()})`;
+
+    // Use shuffled images array to set background
+    boxRef.value.style.backgroundImage = `url(${images[i]})`;
+
     boxRef.value.style.opacity = '0';
     setTimeout(() => {
       boxRef.value.style.transition = 'opacity .1s ease-in';
@@ -60,6 +67,7 @@ onMounted(() => {
     }, i * 200);
   });
 });
+
 </script>
 
 <template>
@@ -73,6 +81,9 @@ onMounted(() => {
       :key="index"
       :ref="el => { boxRefs[index].value = el }"
       class="fixed w-25 h-25 opacity-0 scale-on-hover rounded"
+      :class="{
+        'small-box': index === 0 // replace the condition with your own logic
+      }"
       :style="{ 
         width: '220px', 
         height: '220px', 
@@ -84,6 +95,7 @@ onMounted(() => {
   </div>
 </template>
 
+
 <style>
 .scale-on-hover {
   transition: transform 0.2s ease-in-out;
@@ -91,4 +103,12 @@ onMounted(() => {
 .scale-on-hover:hover {
   transform: scale(1.5);
 }
+
+@media (max-width: 768px) {
+  .small-box {
+    @apply w-12 h-12;
+  }
+}
+
+
 </style>

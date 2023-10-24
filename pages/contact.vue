@@ -5,11 +5,11 @@ definePageMeta({
 </script>
 
 <template>
-   <div class="w-full flex justify-center px-4">
-  <div class="relative flex flex-col items-center justify-center h-screen">
-<section class="align-left">
-  <div class="px-4 mx-auto max-w-screen-xl w-2xl">
-      <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-white">Get In Touch</h2>
+   <div class="w-full flex justify-center">
+  <div class="relative flex flex-col items-center justify-center h-screen w-full">
+<section class="align-left w-full">
+  <div class="mx-auto w-full md:w-2xl px-4">
+      <h2 class="mb-4 text-6xl tracking-tight font-extrabold text-center text-white px-4">Get In Touch</h2>
       <form action="#" class="space-y-8 text-lg">
           <div>
               <label for="email" class="block mb-2 ttext-gray-300 text-left font-bold">Email</label>

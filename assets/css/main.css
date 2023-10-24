@@ -8,6 +8,14 @@
     }
 }
 
+@tailwind components {
+  @media (max-width: 768px) {
+  .small-box {
+    @apply w-12 h-12;
+  }
+}
+
+}
 @font-face {
   font-family: 'Dortmund';
   src: url('/assets/fonts/Dortmund-ExtraBold.otf') format('opentype');
