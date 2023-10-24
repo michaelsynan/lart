@@ -108,10 +108,10 @@ onMounted(() => {
 
 <style>
 .scale-on-hover {
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out !important;
 }
 .scale-on-hover:hover {
-  transform: scale(1.5);
+  transform: scale(1.5) !important;
 }
 
 @media (max-width: 768px) {
