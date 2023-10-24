@@ -6,6 +6,10 @@ const boxRefs = Array(4).fill(null).map(() => ref(null));
 const state = reactive({ step: speed, isHovered: false });
 const images = Array.from({ length: 14 }, (_, i) => `${i + 1}.jpg`);
 
+function getRandomImage() {
+  return images[Math.floor(Math.random() * images.length)];
+}
+
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -26,16 +30,37 @@ function easeStep(target) {
   }, 16);
 }
 
-let lastRight = 0;
+function calculateSpacingMultiplier(windowWidth) {
+  if (windowWidth < 800) {
+    return 1;
+  }
+  return 0.3;
+}
 
 onMounted(() => {
+  function animateBox(box) {
+    let position = parseFloat(box.style.right);
+    function moveBox() {
+      if (position <= -220) {
+        position = Math.max(window.innerWidth, lastRight + 200);
+        lastRight = position + 220;
+      }
+      position -= state.step;
+      box.style.right = `${position}px`;
+      requestAnimationFrame(moveBox);
+    }
+    requestAnimationFrame(moveBox);
+  }
+
   shuffleArray(images);
 
   const randomIndexes = [0, 1, 2, 3];
   shuffleArray(randomIndexes);
 
+  let lastRight = 0;
+
   randomIndexes.forEach((index, i) => {
-    const initialPosition = lastRight + 220 + (window.innerWidth > 800 ? i * 50 : 0); // Extra spacing for large screens
+    const initialPosition = lastRight + 200;
     lastRight = initialPosition + 220;
 
     const boxRef = boxRefs[index];
@@ -51,20 +76,9 @@ onMounted(() => {
   });
 });
 
-function animateBox(box) {
-  let position = parseFloat(box.style.right);
-  function moveBox() {
-    if (position <= -220) {
-      position = window.innerWidth;
-    }
-    position -= state.step;
-    box.style.right = `${position}px`;
-    requestAnimationFrame(moveBox);
-  }
-  requestAnimationFrame(moveBox);
-}
-</script>
 
+
+</script>
 
 <template>
   <div 
