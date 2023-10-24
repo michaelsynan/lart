@@ -22,14 +22,14 @@ onMounted(() => {
       <div class="text-center text-white mb-20 grid grid-cols-2 md:flex md:flex-row"
         style="font-size: clamp(16px, 14vw, 240px);">
         <div v-if="showWords[0]"
-          class="z-100 pr-8 md:pr-20 pointer-events-none text-outline mainheading -rotate-15 text-stone-200 ">
+          class="z-100 pr-8 md:pr-20 pointer-events-none text-outline mainheading -rotate-15 text-stone-100 ">
           L'art</div>
-        <div v-if="showWords[1]" class="pr-8 md:pr-20text-outline mainheading -rotate-15 text-stone-200 ">de
+        <div v-if="showWords[1]" class="pr-8 md:pr-20text-outline mainheading -rotate-15 text-stone-100 ">de
         </div>
         <div v-if="showWords[2]"
-          class="z-100 pr-8 md:pr-20 pointer-events-none text-outline mainheading -rotate-15 text-stone-200">
+          class="z-100 pr-8 md:pr-20 pointer-events-none text-outline mainheading -rotate-15 text-stone-100">
           la</div>
-        <div v-if="showWords[3]" class="text-outline mainheading -rotate-15 text-stone-200 ">rue</div>
+        <div v-if="showWords[3]" class="text-outline mainheading -rotate-15 text-stone-100 ">rue</div>
       </div>
     </div>
     <MainRow :speed="2" />
