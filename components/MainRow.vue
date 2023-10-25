@@ -1,10 +1,9 @@
 <script setup>
 import { ref, reactive, onMounted } from 'vue';
 
-const { speed = 1 } = defineProps(['speed']);
+const { images, speed = 1 } = defineProps(['images', 'speed']);
 const boxRefs = Array(4).fill(null).map(() => ref(null));
 const state = reactive({ step: speed, isHovered: false });
-const images = Array.from({ length: 14 }, (_, i) => `${i + 1}.jpg`);
 
 function getRandomImage() {
   return images[Math.floor(Math.random() * images.length)];
@@ -119,7 +118,5 @@ onMounted(() => {
     @apply w-12 h-12;
   }
 }
-
-
 
 </style>

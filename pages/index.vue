@@ -1,12 +1,25 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, defineProps } from 'vue';
+
 const { delay = 0 } = defineProps(['delay']);
 const online = useOnline(); // Assuming useOnline is imported or defined
 const showWords = ref([false, false, false, false]);
 
+// Define images array and shuffle function
+const images = Array.from({ length: 14 }, (_, i) => `${i + 1}.jpg`);
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+shuffleArray(images); // Randomize the images array
+
 definePageMeta({
   layout: 'home'
-})
+});
 
 onMounted(() => {
   setTimeout(() => { showWords.value[0] = true; }, delay + 1000);
@@ -15,6 +28,7 @@ onMounted(() => {
   setTimeout(() => { showWords.value[3] = true; }, delay + 2500);
 });
 </script>
+
 <template>
   <div class="relative flex flex-col w-full h-screen">
     <!-- Mobile only -->
@@ -36,9 +50,9 @@ onMounted(() => {
         <div v-if="showWords[3]" class="text-outline mainheading -rotate-15 text-stone-100 ">rue</div>
       </div>
     </div>
-    <MainRow :speed="2" />
-    <MainRow :delay="1000" :speed="3" />
-    <MainRow :delay="2000" :speed="2" />
+    <MainRow :speed="2" :images="images.slice(0, 4)" />
+  <MainRow :delay="1000" :speed="3" :images="images.slice(4, 8)" />
+  <MainRow :delay="2000" :speed="2" :images="images.slice(8, 12)" />
   </div>
 </template>
 
