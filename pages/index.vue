@@ -15,16 +15,20 @@ onMounted(() => {
   setTimeout(() => { showWords.value[3] = true; }, delay + 2500);
 });
 </script>
-
 <template>
   <div class="relative flex flex-col w-full h-screen">
-    <div class="absolute inset-0 flex items-center justify-center">
+    <!-- Mobile only -->
+    <div id="headingmobile" class="md:hidden top-0 fixed left-1/2 transform -translate-x-1/2 text-6xl font-bold mt-4 z-100 w-full">
+      L'art de la rue
+    </div>
+    <!-- Desktop only -->
+    <div id="headingdesktop" class="hidden md:flex md:absolute md:inset-0 items-center justify-center">
       <div class="text-center text-white mb-20 grid grid-cols-2 md:flex md:flex-row"
         style="font-size: clamp(16px, 14vw, 240px);">
         <div v-if="showWords[0]"
           class="z-100 pr-8 md:pr-20 pointer-events-none text-outline mainheading -rotate-15 text-stone-100 ">
           L'art</div>
-        <div v-if="showWords[1]" class="pr-8 md:pr-20text-outline mainheading -rotate-15 text-stone-100 ">de
+        <div v-if="showWords[1]" class="pr-8 md:pr-20 text-outline mainheading -rotate-15 text-stone-100 ">de
         </div>
         <div v-if="showWords[2]"
           class="z-100 pr-8 md:pr-20 pointer-events-none text-outline mainheading -rotate-15 text-stone-100">
@@ -37,6 +41,7 @@ onMounted(() => {
     <MainRow :delay="2000" :speed="2" />
   </div>
 </template>
+
 
 
 <style block>
