@@ -34,33 +34,33 @@ const handleButtonClick = () => {
 
 <template>
   <div class="w-full flex justify-center">
-    <div class="relative flex flex-col items-center justify-start md:mt-0 mt-10 md:justify-center h-screen w-full">
+    <div class="relative flex flex-col items-center justify-start md:mt-20 mt-10 h-screen w-full">
       <section class="align-left w-full mb-0 md:mb-10">
         <div class="mx-auto w-full md:w-xl px-4">
           <div id="headingmobile"
-            class="md:hidden top-0 text-center text-5xl font-bold z-100 pb-2 w-full mainheading">
+            class="top-0 text-center text-5xl font-bold z-100 pb-3 w-full mainheading">
             <span>L'art de la rue</span>
           </div>
           <h2
-            class="mb-4 text-2xl md:text-3xl md:text-5xl tracking-tight font-extrabold text-center md:text-center text-white px-0 pb-3 md:px-4 mainheading">
+            class="mb-4 text-2xl md:text-3xl tracking-tight font-extrabold text-center md:text-center text-white px-0 pb-3 md:px-4 mainheading">
             Get In Touch</h2>
-          <form action="#" class="space-y-6 text-lg">
+          <form action="#" class="space-y-6 text-base">
             <div>
-              <label for="email" class="block mb-2 text-gray-200 text-left font-bold">Email</label>
+              <label for="email" class="block mb-1 text-gray-200 text-left font-bold">Email</label>
               <input type="email" id="email"
-                class="text-base shadow-sm bg-gray-50 border border-gray-300 text-gray-900  rounded-sm focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                class="text-sm shadow-sm bg-gray-50 border border-gray-300 text-gray-900  rounded-sm focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                 placeholder="your@email.com" required>
             </div>
             <div>
-              <label for="subject" class="block mb-2  font-bold text-gray-200 text-left">Subject</label>
+              <label for="subject" class="block mb-1  font-bold text-gray-200 text-left">Subject</label>
               <input type="text" id="subject"
-                class="text-base block p-3 w-full text-gray-900 bg-gray-50 rounded-sm border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                class="text-sm block p-3 w-full text-gray-900 bg-gray-50 rounded-sm border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                 placeholder="What can we help you with?" required>
             </div>
             <div class="sm:col-span-2">
-              <label for="message" class="block mb-2 font-bold text-gray-200 text-left">Message</label>
+              <label for="message" class="block mb-1 font-bold text-gray-200 text-left">Message</label>
               <textarea id="message" rows="6"
-                class="text-base block p-2.5 w-full text-gray-900 bg-gray-50 rounded-sm shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                class="text-sm block p-2.5 w-full text-gray-900 bg-gray-50 rounded-sm shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 placeholder="Write a nice message..."></textarea>
             </div>
             <button type="submit" @click="handleButtonClick" :disabled="formSent" :class="{
