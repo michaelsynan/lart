@@ -38,7 +38,7 @@ const handleButtonClick = () => {
       <section class="align-left w-full mb-0 md:mb-10">
         <div class="mx-auto w-full md:w-xl px-4">
           <h2
-            class="mb-4 text-5xl md:text-5xl tracking-tight font-extrabold text-left md:text-center text-white px-0 pb-3 md:px-4">
+            class="mb-4 text-5xl md:text-5xl tracking-tight font-extrabold text-left md:text-center text-white px-0 pb-3 md:px-4 mainheading">
             Get In Touch</h2>
           <form action="#" class="space-y-6 text-lg">
             <div>
