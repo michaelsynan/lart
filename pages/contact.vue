@@ -60,7 +60,7 @@ const handleButtonClick = () => {
                 placeholder="Write a nice message..."></textarea>
             </div>
             <button type="submit" @click="handleButtonClick" :disabled="formSent" :class="{
-              'cursor-not-allowed bg-opacity-50': formSent,
+              'cursor-not-allowed !bg-stone-500 !text-stone-300': formSent,
               'hover:bg-teal-500': !formSent
             }" class="uppercase tracking-wide flex justify-center items-center w-full h-10 md:h-12 text-lg md:text-xl font-bold text-center text-white rounded-sm focus:ring-4 focus:outline-none focus:ring-primary-300 bg-teal transition-color duration-100 ease-in-out dark:focus:ring-primary-800">
 
