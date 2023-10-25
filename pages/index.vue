@@ -18,7 +18,7 @@ function shuffleArray(array) {
 shuffleArray(images); // Randomize the images array
 
 definePageMeta({
-  layout: 'home'
+  layout: 'default'
 });
 
 onMounted(() => {

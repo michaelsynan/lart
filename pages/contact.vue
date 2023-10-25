@@ -36,7 +36,7 @@ const handleButtonClick = () => {
   <div class="w-full flex justify-center">
     <div class="relative flex flex-col items-center justify-start md:mt-20 mt-10 h-screen w-full">
       <section class="align-left w-full mb-0 md:mb-10">
-        <div class="mx-auto w-full md:w-xl px-4">
+        <div class="mx-auto w-full md:w-lg px-4">
           <div id="headingmobile"
             class="top-0 text-center text-5xl font-bold z-100 pb-3 w-full mainheading">
             <span>L'art de la rue</span>
@@ -78,7 +78,7 @@ const handleButtonClick = () => {
               </div>
             </button>
             <div class="h-6">
-              <div v-if="response">{{ response }}</div>
+              <div v-if="response" class="">{{ response }}</div>
             </div>
           </form>
         </div>
