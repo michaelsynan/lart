@@ -22,10 +22,10 @@ const handleButtonClick = () => {
     const isSuccess = true; // replace with actual success condition
 
     if (isSuccess) {
-      response.value = 'Success!';
+      response.value = 'Success! Thank you for your message.';
       formSent.value = true; // Set formSent to true on success
     } else {
-      response.value = 'Something went wrong';
+      response.value = 'Something went wrong. Please try again later.';
     }
   }, 2000);
 };
