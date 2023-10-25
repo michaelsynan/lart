@@ -31,3 +31,8 @@
 body, html {
   overflow-x: hidden;
 }
+
+
+.serif {
+  font-family: 'Georgia', serif;
+}
