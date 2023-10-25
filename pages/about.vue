@@ -8,13 +8,11 @@ definePageMeta({
   <div class="w-full flex justify-center px-4">
     <div class="relative flex flex-col items-center justify-start  mt-10 md:mt-20 h-screen">
       <div class="rounded-md w-content mb-12">
-  <div id="headingmobile" class="bg-stone-950 top-0 text-center text-5xl font-bold z-100 pb-3 w-full">
-    <span class="mainheading">L'art de la rue</span>
-  </div>
-  <h2 class="text-lg md:text-xl font-bold py-2 uppercase bg-teal rounded">
-    <span class="mainheading py-2">Established 2000</span>
-  </h2>
-</div>
+        <!-- <MainHeading /> -->
+        <h2 class="text-lg md:text-xl font-bold py-2 uppercase rounded" bakclass="bg-teal">
+          <span class="mainheading py-2">Established 2000</span>
+        </h2>
+      </div>
 
       <p class="px-2 text-lg md:text-xl max-w-lg leading-loose mb-6 serif tracking-wide">NYC-based street artist Mohammad
         designs jewelry that brings to life the history and culture of the city in which he lives. Follow his <a
@@ -27,6 +25,7 @@ definePageMeta({
           href="https://formworkstudios.com" class="hover:border-b-2 hover:border-stone-700">Formwork Studios</a></p>
 
     </div>
-</div></template>
+  </div>
+</template>
 
 <style scoped></style>

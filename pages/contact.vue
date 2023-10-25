@@ -37,10 +37,7 @@ const handleButtonClick = () => {
     <div class="relative flex flex-col items-center justify-start md:mt-20 mt-10 h-screen w-full">
       <section class="align-left w-full mb-0 md:mb-10">
         <div class="mx-auto w-full md:w-lg px-4">
-          <div id="headingmobile"
-            class="top-0 text-center text-5xl font-bold z-100 pb-3 w-full mainheading">
-            <span>L'art de la rue</span>
-          </div>
+         <!-- <MainHeading /> -->
           <h2
             class="mb-4 text-2xl md:text-3xl tracking-tight font-extrabold text-center md:text-center text-white px-0 pb-3 md:px-4 mainheading">
             Get In Touch</h2>

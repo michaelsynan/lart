@@ -31,11 +31,11 @@ onMounted(() => {
 
 <template>
   <div class="relative flex flex-col w-full h-screen">
-    <!-- Mobile only -->
+    <!-- Mobile only 
     <div id="headingmobile" class="md:hidden top-0 fixed left-1/2 transform -translate-x-1/2 text-5xl font-bold mt-10 z-100 w-full mainheading">
       <span>L'art de la rue</span>
-    </div>
-    <!-- Desktop only -->
+    </div> -->
+    <!-- Desktop only 
     <div id="headingdesktop" class="hidden md:flex md:absolute md:inset-0 items-center justify-center">
       <div class="text-center text-white mb-20 grid grid-cols-2 md:flex md:flex-row"
         style="font-size: clamp(16px, 14vw, 240px);">
@@ -48,8 +48,8 @@ onMounted(() => {
           class="z-100 pr-8 md:pr-20 pointer-events-none text-outline mainheading -rotate-15 text-stone-100">
           la</div>
         <div v-if="showWords[3]" class="text-outline mainheading -rotate-15 text-stone-100 ">rue</div>
-      </div>
-    </div>
+      </div> 
+    </div> -->
     <MainRow :speed="2" :images="images.slice(0, 4)" />
   <MainRow :delay="1000" :speed="3" :images="images.slice(4, 8)" />
   <MainRow :delay="2000" :speed="2" :images="images.slice(8, 12)" />
