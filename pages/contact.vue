@@ -34,11 +34,15 @@ const handleButtonClick = () => {
 
 <template>
   <div class="w-full flex justify-center">
-    <div class="relative flex flex-col items-center justify-start md:mt-0 mt-20 md:justify-center h-screen w-full">
+    <div class="relative flex flex-col items-center justify-start md:mt-0 mt-10 md:justify-center h-screen w-full">
       <section class="align-left w-full mb-0 md:mb-10">
         <div class="mx-auto w-full md:w-xl px-4">
+          <div id="headingmobile"
+            class="md:hidden top-0 text-center text-5xl font-bold z-100 pb-2 w-full mainheading">
+            <span>L'art de la rue</span>
+          </div>
           <h2
-            class="mb-4 text-4xl md:text-5xl md:text-5xl tracking-tight font-extrabold text-left md:text-center text-white px-0 pb-3 md:px-4 mainheading">
+            class="mb-4 text-2xl md:text-3xl md:text-5xl tracking-tight font-extrabold text-center md:text-center text-white px-0 pb-3 md:px-4 mainheading">
             Get In Touch</h2>
           <form action="#" class="space-y-6 text-lg">
             <div>
@@ -62,7 +66,8 @@ const handleButtonClick = () => {
             <button type="submit" @click="handleButtonClick" :disabled="formSent" :class="{
               'cursor-not-allowed !bg-stone-500 !text-stone-300': formSent,
               'hover:bg-teal-500': !formSent
-            }" class="uppercase tracking-wide flex justify-center items-center w-full h-10 md:h-12 text-lg md:text-xl font-bold text-center text-white rounded-sm focus:ring-4 focus:outline-none focus:ring-primary-300 bg-teal transition-color duration-100 ease-in-out dark:focus:ring-primary-800">
+            }"
+              class="uppercase tracking-wide flex justify-center items-center w-full h-10 md:h-12 text-lg md:text-xl font-bold text-center text-white rounded-sm focus:ring-4 focus:outline-none focus:ring-primary-300 bg-teal transition-color duration-100 ease-in-out dark:focus:ring-primary-800">
 
               <span v-if="!loading" class="w-full text-center">Send</span>
               <div v-if="loading" class="flex items-center justify-center">

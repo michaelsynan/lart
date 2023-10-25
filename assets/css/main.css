@@ -4,7 +4,7 @@
 
 @layer base {
     body {
-        @apply bg-gray-900 text-gray-200 leading-normal h-screen;
+        @apply bg-gray-900 text-gray-100 leading-normal h-screen;
     }
 }
 
