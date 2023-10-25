@@ -51,22 +51,20 @@ const handleButtonClick = () => {
               <label for="subject" class="block mb-2  font-bold text-gray-200 text-left">Subject</label>
               <input type="text" id="subject"
                 class="text-base block p-3 w-full text-gray-900 bg-gray-50 rounded-sm border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-                placeholder="Let us know how we can help you" required>
+                placeholder="What can we help you with?" required>
             </div>
             <div class="sm:col-span-2">
               <label for="message" class="block mb-2 font-bold text-gray-200 text-left">Message</label>
               <textarea id="message" rows="6"
                 class="text-base block p-2.5 w-full text-gray-900 bg-gray-50 rounded-sm shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                placeholder="Send a detailed message..."></textarea>
+                placeholder="Write a nice message..."></textarea>
             </div>
-            <button type="submit" @click="handleButtonClick" :disabled="formSent"
-  :class="{
-    'cursor-not-allowed bg-opacity-50': formSent,
-    'hover:bg-teal-500': !formSent
-  }"
-  class="uppercase tracking-wide flex justify-center items-center w-full h-12 text-xl font-bold text-center text-white rounded-sm focus:ring-4 focus:outline-none focus:ring-primary-300 bg-teal transition-color duration-100 ease-in-out dark:focus:ring-primary-800">
- 
-  <span v-if="!loading" class="w-full text-center">Send</span>
+            <button type="submit" @click="handleButtonClick" :disabled="formSent" :class="{
+              'cursor-not-allowed bg-opacity-50': formSent,
+              'hover:bg-teal-500': !formSent
+            }" class="uppercase tracking-wide flex justify-center items-center w-full h-12 text-xl font-bold text-center text-white rounded-sm focus:ring-4 focus:outline-none focus:ring-primary-300 bg-teal transition-color duration-100 ease-in-out dark:focus:ring-primary-800">
+
+              <span v-if="!loading" class="w-full text-center">Send</span>
               <div v-if="loading" class="flex items-center justify-center">
                 <svg xmlns="http://www.w3.org/2000/svg" class="animate-spin h-6 w-6" viewBox="0 0 24 24"
                   style="transform-origin: center;">

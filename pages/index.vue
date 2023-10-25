@@ -18,8 +18,8 @@ onMounted(() => {
 <template>
   <div class="relative flex flex-col w-full h-screen">
     <!-- Mobile only -->
-    <div id="headingmobile" class="md:hidden top-0 fixed left-1/2 transform -translate-x-1/2 text-6xl font-bold mt-4 z-100 w-full">
-      L'art de la rue
+    <div id="headingmobile" class="md:hidden top-0 fixed left-1/2 transform -translate-x-1/2 text-6xl font-bold mt-4 z-100 w-full mainheading">
+      <span>L'art de la rue</span>
     </div>
     <!-- Desktop only -->
     <div id="headingdesktop" class="hidden md:flex md:absolute md:inset-0 items-center justify-center">
