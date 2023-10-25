@@ -6,7 +6,7 @@ definePageMeta({
 
 <template>
   <div class="w-full flex justify-center px-4">
-    <div class="relative flex flex-col items-center justify-start  mt-10 md:mt-20 h-screen">
+    <div class="relative flex flex-col items-center justify-start  mt-28 md:mt-40 h-full">
       <div class="rounded-md w-content mb-12">
         <!-- <MainHeading /> -->
         <h2 class="text-lg md:text-xl font-bold py-2 uppercase rounded" bakclass="bg-teal">

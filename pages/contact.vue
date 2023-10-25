@@ -34,7 +34,7 @@ const handleButtonClick = () => {
 
 <template>
   <div class="w-full flex justify-center">
-    <div class="relative flex flex-col items-center justify-start md:mt-20 mt-10 h-screen w-full">
+    <div class="relative flex flex-col items-center justify-start md:mt-40 mt-28 h-full w-full">
       <section class="align-left w-full mb-0 md:mb-10">
         <div class="mx-auto w-full md:w-lg px-4">
          <!-- <MainHeading /> -->
