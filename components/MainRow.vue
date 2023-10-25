@@ -60,7 +60,8 @@ onMounted(() => {
   let lastRight = 0;
 
   randomIndexes.forEach((index, i) => {
-    const initialPosition = lastRight + 200;
+    const randomOffset = Math.floor(Math.random() * 400);  // Randomize the initial position
+    const initialPosition = lastRight + 200 + randomOffset;  // Apply the random offset
     lastRight = initialPosition + 220;
 
     const boxRef = boxRefs[index];
@@ -75,6 +76,7 @@ onMounted(() => {
     }, i * 200);
   });
 });
+
 
 
 
