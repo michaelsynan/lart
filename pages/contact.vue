@@ -1,10 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 
-definePageMeta({
-  layout: 'default'
-})
-
 const loading = ref(false);
 const response = ref('');
 const formSent = ref(false); // New variable to track if form is sent successfully
@@ -37,7 +33,6 @@ const handleButtonClick = () => {
     <div class="relative flex flex-col items-center justify-start md:mt-40 mt-28 h-full w-full">
       <section class="align-left w-full mb-0 md:mb-10">
         <div class="mx-auto w-full md:w-lg px-4">
-         <!-- <MainHeading /> -->
           <h2
             class="mb-4 text-2xl md:text-3xl tracking-tight font-extrabold text-center md:text-center text-white px-0 pb-3 md:px-4 mainheading">
             Get In Touch</h2>

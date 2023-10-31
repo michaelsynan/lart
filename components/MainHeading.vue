@@ -1,8 +1,8 @@
 <script lang="ts" setup></script>
 
 <template>
-  <div id="headingmobile" class="bg-stone-950 top-0 text-center text-5xl font-bold z-100 pb-3 w-full bg-teal pt-2 fixed">
-    <span class="mainheading">L'art de la rue</span>
+  <div id="headingmobile" class="bg-stone-950 top-0 text-center text-4xl font-bold z-100 pb-2.5 w-full bg-teal pt-1.5 fixed">
+    <span class="mainheading">L'Art De La Rue</span>
   </div>
 </template>
 

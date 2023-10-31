@@ -1,2 +1,2 @@
-export const appName = "L'art de la rue"
-export const appDescription = "L'art de la rue"
+export const appName = "L'Art De La Rue"
+export const appDescription = "L'Art De La Lue"

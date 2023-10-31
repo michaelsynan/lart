@@ -1,17 +1,13 @@
 <script setup lang="ts">
-definePageMeta({
-  layout: 'default'
-})
 </script>
 
 <template>
   <div class="w-full flex justify-center px-4 overflow-y-hidden">
     <div class="relative flex flex-col items-center justify-start  mt-28 md:mt-40 h-full">
       <div class="rounded-md w-content mb-12">
-        <!-- <MainHeading /> -->
-        <h2 class="text-lg md:text-xl font-bold py-2 uppercase rounded" bakclass="bg-teal">
-          <span class="mainheading py-2">Established 2000</span>
-        </h2>
+        <h2
+            class="mb-4 text-2xl md:text-3xl tracking-tight font-extrabold text-center md:text-center text-white px-0 pb-3 md:px-4 mainheading">
+            NYC Street Art Jewelry</h2>
       </div>
 
       <p class="px-2 text-lg md:text-xl max-w-lg leading-loose mb-6 serif tracking-wide">NYC-based street artist Mohammad
