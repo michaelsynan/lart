@@ -10,7 +10,7 @@
             NYC Street Art Jewelry</h2>
       </div>
 
-      <p class="px-2 text-lg md:text-xl max-w-lg leading-loose mb-6 serif tracking-wide">NYC-based street artist Mohammad
+      <p class="px-2 text-lg md:text-xl max-w-lg !leading-relaxed mb-6 serif tracking-wide">NYC-based street artist Mohammad
         designs jewelry that brings to life the history and culture of the city in which he lives. Follow his <a
           href="https://www.instagram.com/ojo_dolce/?hl=en"
           class="border-b-2 hover:border-b-3 hover:border-teal">Instagram</a> for the latest updates.</p>

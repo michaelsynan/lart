@@ -10,8 +10,6 @@
 
 </template>
 
-
-
 <style block>
 .text-outline {}
 </style>
